@@ -15,7 +15,6 @@
     <!-- Optional JavaScript; choose one of the two! -->
 
     <!-- Option 1: Bootstrap Bundle with Popper -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-p34f1UUtsS3wqzfto5wAAmdvj+osOnFyQFpp4Ua3gs/ZVWx6oOypYoCJhGGScy+8" crossorigin="anonymous"></script>
 
     <!-- Option 2: Separate Popper and Bootstrap JS -->
     <!--
@@ -48,7 +47,7 @@
         </nav>
 
     </header>
-    <main class="container-fluid bg-secondary">
+     <main class="container-fluid bg-secondary">
         <div class="row">
         <div class="col-12 col-md-6 col-lg-5">
             <div class="card text-danger bg-dark mb">
@@ -58,10 +57,10 @@
                 
                 <div class="mb-3 card-body">
                     <!-- Input de Nombre -->
-                    <label for="from-label" for="nombre-txt"><h6>Ingrese nombre del Guerrero </h6></label>
+                    <label for="from-label" for="nombre_txt"><h6>Ingrese nombre del Guerrero </h6></label>
 
                     <div> <!--div para separar input -->
-                        <input type="text" class="from-control bg-secondary text-warning" id="nombre-txt">
+                        <input type="text" class="from-control bg-secondary text-warning" id="nombre_txt">
 
                     </div>
 
@@ -69,31 +68,31 @@
                         Mt-4 es para seprar del de arriba -->
 
                     <div class="mt-4"> 
-                        <label for="select-raza" class="from-label" >Seleccione la raza de su Guerrero</label>
+                        <label for="select_raza" class="from-label" >Seleccione la raza de su Guerrero</label>
                         
-                            <select id="select-raza" class="form-select text-warning bg-secondary" >
-                                <option value="1">Orco</option>
-                                <option value="2">Uruk</option>
+                            <select id="select_raza" class="form-select text-warning bg-secondary" >
+                                <option value="Orco">Orco</option>
+                                <option value="Uruk">Uruk</option>
  
                             </select>
                         
                     </div>
 
                     <div class="mt-4">
-                        <label class="from-label" for="nivel-guerrero">Cual es el nivel del Guerrero</label>
+                        <label class="from-label" for="nivel_guerrero">Cual es el nivel del Guerrero</label>
                         <div>
-                            <input type="number" class="from-control bg-secondary text-warning" id="nivel-guerrero">
+                            <input type="number" class="from-control bg-secondary text-warning" id="nivel_guerrero">
                         </div>
                     </div>
 
                     <div class="mt-4"> 
-                        <label for="select-raza" class="from-label" >Seleccione la raza de su Guerrero</label>
+                        <label for="select_rango" class="from-label" >Seleccione el Rango </label>
                         
-                            <select id="select-raza" class="form-select text-warning bg-secondary" >
+                            <select id="select_rango" class="form-select text-warning bg-secondary" >
                                 <option value="Guerrero">Guerrero</option>
                                 <option value="Capitan">Capitan</option>
                                 <option value="Caudillo">Caudillo</option>
-                                <option value="ManoDeSauron">Mano de Sauron</option>
+                                <option value="Mano De Sauron">Mano de Sauron</option>
                                 
  
                             </select>
@@ -102,7 +101,14 @@
 
 
                 </div>  
-                <div class="card-footer">
+                <div class="card-footer mt-4">
+
+                    <div class="text-center">
+
+                        <button type="button" class="btn btn-primary btn-lg btn-block" id="btn_ingresar_guerrero" >Ingresar Guerrero</button>
+
+                    </div>
+
                     
                 </div>
               </div>
@@ -110,16 +116,40 @@
           
         </div>
 
+     <!-- Card de Tabla dee Tropas -->
+
         <div class="col col-md col-lg">
-            <div class="card text-white bg-dark ">
-                <div class="card-header text-danger">
-                    Ingrese 
+            <div class="card text-danger bg-dark ">
+                <div class="card-header text-danger text-center">
+                    <h3>Lista De Tropas</h3> 
                 </div>
                 <div class="card-body text-danger">
-                  pone weas
+                    <!-- class table para crear la table -->
+                  <table class="table table-dark text-danger table-bordered  table-hover table-stripped">
+                      <thead>
+                          <tr>
+                              <th>Nombre</th>
+                              <th>Raza</th>
+                              <th>Rango</th>
+                              <th>Nivel</th>
+                          </tr>
+                      </thead>
+                      <tbody id="tabla_body">
+
+                    
+                      </tbody>
+                  </table>
                 </div>
                 <div class="card-footer text-danger">
-                    ingresa weas
+                    <img src="img/ojo3.png" alt="" class="img-fluid text-center" width="125">
+                    <img src="img/ojo3.png" alt="" class="img-fluid text-center" width="125">
+                    <img src="img/ojo3.png" alt="" class="img-fluid text-center" width="125">
+                    <img src="img/ojo3.png" alt="" class="img-fluid text-center" width="125">
+                    <img src="img/ojo3.png" alt="" class="img-fluid text-center" width="125">
+                    <img src="img/ojo3.png" alt="" class="img-fluid text-center" width="125">
+                    <img src="img/ojo3.png" alt="" class="img-fluid text-center" width="125">
+
+
                 </div>
               </div>
             
@@ -128,5 +158,7 @@
 
 
     </main>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-p34f1UUtsS3wqzfto5wAAmdvj+osOnFyQFpp4Ua3gs/ZVWx6oOypYoCJhGGScy+8" crossorigin="anonymous"></script>
+    <script src="js/index.js"></script>
 
 </body>
